@@ -1,0 +1,127 @@
+.project_details {
+  position: relative;
+  width: 40%;
+  transform: translateX(-35%);
+
+  &.opened {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(0);
+  }
+
+  .icon-arrow-down {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: auto;
+    background-color: $black;
+    border-radius: 50%;
+    text-align: center;
+    z-index: $zindex_global;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .details {
+
+    &_container {
+      display: flex;
+      margin-top: calc(100vh + 50px);
+    }
+
+    &_main {
+      background-color: $white;
+      max-width: 30vw;
+      padding: 40px;
+      color: $brown;
+      max-height: 200px;
+      position: relative;
+      overflow: visible;
+      transition: max-height 0.3s ease-in;
+
+      &.opened {
+        //max-height: 900px;
+        max-height: 620px;
+      }
+
+      &-intro {
+        font-size: 21px;
+        font-weight: 800;
+        //padding: 40px;
+        background-color: white;
+        // max-width: 30vw;
+        margin: -40px;
+        padding: 40px 40px 60px;
+        height: auto;
+      }
+
+      img {
+        width: 26px;
+        transition: transform 0.15s ease-in 0s;
+        float: right;
+        &:hover, &.opened {
+          transform: rotate(-45deg);
+        }
+      }
+      &-purpose, &-solution {
+        align-items: baseline;
+        display: flex;
+        opacity: 0;
+        transition: all 0.3s ease-in, max-height 0.3s ease-in;
+        max-height: 0;
+        .title {
+          width: 140px;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 700;
+        }
+        p:nth-child(2) {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        &.opened {
+          opacity: 1;
+          max-height: 320px;
+        }
+      }
+      &-purpose {
+        &.opened {
+          margin-top: 60px;
+        }
+      }
+    }
+    &_extras {
+      //    top: 270px;
+      // opacity: 0;
+      // left: calc(40vw + 50px);
+      width: 30vw;
+      position: relative;
+      overflow: hidden;
+      //top:0;
+      max-height: 0;
+      transition: max-height 0.3s ease-in;
+      margin-left: 45px;
+      margin-top: 270px;
+
+      &.opened {
+        max-height: 600px;
+      }
+    }
+
+    &_img {
+      width: 70vw;
+      // display: none;
+      height: auto;
+      &.opened {
+        display: block;
+      }
+    }
+
+  }
+
+}

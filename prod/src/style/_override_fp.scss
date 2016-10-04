@@ -1,0 +1,59 @@
+#fp-nav {
+  transition: transform 0.5s 0s;
+  transform: translateX(-45px);
+
+  ul {
+    width: 45px;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+    li {
+      width: 30px;
+      height: 20px;
+      margin: 0;
+      &:first-child {
+        display: none;
+      }
+      a span {
+        width: 7px;
+        height: 7px;
+        margin: 0;
+        background: none;
+        border: 1px black solid;
+
+      }
+      a.active span, a:hover span {
+        width: 7px;
+        height: 7px;
+        margin: 0;
+        background-color: black;
+      }
+    }
+  }
+  &.left {
+    left: 0;
+    background: white;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin: 0 !important;
+  }
+
+  &.show {
+    transform: translateX(0px);
+    transition-delay: 0.3s;
+  }
+}
+
+.section {
+  //padding: 0 45px;
+  background-image: url($path_image + "motif.png");
+  background-size: cover;
+  &.opened {
+    background-image: none;
+  }
+}
+
+.fp-scrollable {
+  overflow: visible;
+}

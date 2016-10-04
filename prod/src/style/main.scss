@@ -1,0 +1,59 @@
+@import "../../node_modules/normalize.scss/normalize.scss";
+@import "../../node_modules/fullpage.js/jquery.fullPage.scss";
+@import "_variables";
+@import "_intro";
+@import "_projects";
+@import "_details";
+@import "_global";
+@import "_override_fp";
+@import "_icomoon";
+
+// utils
+//@import '_variables.scss';
+//@import '_fonts.scss';
+
+// components
+/**
+@import "components/_components.scss";
+@import "components/_custom-animate.scss";
+@import "components/_svg.scss";
+@import "components/_modale.scss";
+@import "components/_message.scss";
+@import "components/hamburgers/hamburgers.scss";
+
+// partials
+@import 'partials/_layout.scss';
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_agegate.scss';
+@import 'partials/_home.scss';
+@import 'partials/_activation.scss';
+@import 'partials/_concept.scss';
+@import 'partials/_loto.scss';
+@import 'partials/_loto-win.scss';
+@import 'partials/_loto-loose.scss';
+@import 'partials/_error-404.scss';
+@import 'partials/_fobo.scss';
+**/
+
+
+/** postcss-bem-linter: define main-component; weak
+$color: #505;
+
+.fp-scrollable {
+  overflow: visible !important;
+}
+
+.main-component {
+  &__title {
+    color: $color + 111;
+    font-family: sans-serif;
+  }
+}
+
+/** postcss-bem-linter: define utilities
+.u-ellipsis {
+  color: $color;
+}
+
+*/
