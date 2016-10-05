@@ -1,23 +1,21 @@
 .section {
 
+  &#moodwood {
+    background: url($path_image + "motif.png"), url($path_image + "mood.jpg");
+    background-size: cover;
+
+  }
+
   .project {
     color: $white;
     display: flex;
 
-    &_background {
+    &_background-layer {
       position: absolute;
-      top: 0;
-      left: 0;
+      background-color: $black;
       width: 100vw;
       height: 100vh;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-
-    &#moodwood {
-      .project_background {
-        background-image: url($path_image + "motif.png"), url($path_image + "mood.jpg");
-      }
+      opacity: 0;
     }
 
     &_left {

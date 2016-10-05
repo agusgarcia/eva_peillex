@@ -9,6 +9,8 @@
     flex-direction: column;
     align-items: center;
     transform: translateX(0);
+    margin-top: calc(100vh);
+    background-color: $brown-opacity;
   }
 
   .icon-arrow-down {
@@ -30,7 +32,7 @@
 
     &_container {
       display: flex;
-      margin-top: calc(100vh + 50px);
+      margin-top:50px;
     }
 
     &_main {
@@ -44,8 +46,11 @@
       transition: max-height 0.3s ease-in;
 
       &.opened {
-        //max-height: 900px;
-        max-height: 620px;
+        max-height: 900px;
+        //max-height: 620px;
+        display: flex;
+        flex-direction: column;
+        align-self: self-start;
       }
 
       &-intro {
