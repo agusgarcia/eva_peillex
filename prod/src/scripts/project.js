@@ -107,10 +107,11 @@ export default class Project {
     this.$els.$seeButton.addClass('hide-left');
     this.$els.$details.removeClass('hidden');
     this.$els.$details.addClass('opened');
-    this.$els.$fullpage.fullpage.reBuild();
 
     this.$els.$fullpage.fullpage.setAllowScrolling(false);
     this.$els.$fullpage.fullpage.setKeyboardScrolling(false);
+
+    this.$els.$fullpage.fullpage.reBuild();
 
     let details = new Details();
     details.initAnimations();

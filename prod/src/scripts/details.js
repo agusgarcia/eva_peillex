@@ -112,7 +112,7 @@ export default class Details {
 
   scrollToContent() {
 
-    TweenMax.to('.fp-scroller', 0.3, {css:{transform:"translateY(100vh)"}});
+  $('.fp-scroller').css({transform:"translate(0px, -100vh) translateZ(0px)"});
 
   }
 
