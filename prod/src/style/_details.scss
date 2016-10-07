@@ -14,18 +14,23 @@
   }
 
   .icon-arrow-down {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     display: block;
-    margin: auto;
-    background-color: $black;
-    border-radius: 50%;
-    text-align: center;
-    z-index: $zindex_global;
     position: absolute;
     top: -50vh;
     left: 50%;
+    bottom: auto;
+    margin: auto;
     transform: translateX(-50%);
+    z-index: $zindex_global;
+    background-color: $black;
+    color: $white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-size: 13px;
+    animation: none;
   }
 
   .details {
@@ -44,13 +49,14 @@
       position: relative;
       overflow: visible;
       transition: max-height 0.3s ease-in;
+      display: flex;
+      flex-direction: column;
+      align-self: self-start;
 
       &.opened {
         max-height: 900px;
         //max-height: 620px;
-        display: flex;
-        flex-direction: column;
-        align-self: self-start;
+
       }
 
       &-intro {
@@ -67,7 +73,7 @@
       img {
         width: 26px;
         transition: transform 0.15s ease-in 0s;
-        float: right;
+        align-self: flex-end;
         &:hover, &.opened {
           transform: rotate(-45deg);
         }

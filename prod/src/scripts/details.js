@@ -32,6 +32,7 @@ export default class Details {
 
       //Details
       $details: $('.project_details'),
+      $arrowDown: $('.icon-arrow-down', '.project_details'),
       $btnShowExtras: $('.show-extras'),
       $detailsMain: $('.details_main'),
       $detailsMainChildren: $('.details_main-purpose, .details_main-solution'),
@@ -43,6 +44,9 @@ export default class Details {
   }
 
   initEvents() {
+
+    this.$els.$arrowDown.on('click', this.scrollToContent.bind(this));
+
 
   }
 
@@ -88,7 +92,7 @@ export default class Details {
   }
 
   move(what, progress) {
-    let to = progress * 0.9;
+    let to = progress * 0.95;
     TweenMax.to('.project_background-layer', 0.3, {opacity: to});
     console.log(to);
 }
@@ -106,6 +110,11 @@ export default class Details {
       .addTo(this.controller);
   }
 
+  scrollToContent() {
+
+    TweenMax.to('.fp-scroller', 0.3, {css:{transform:"translateY(100vh)"}});
+
+  }
 
 
 }

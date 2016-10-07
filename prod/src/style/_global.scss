@@ -60,7 +60,7 @@ body {
 }
 
 .icon {
-  &-arrow-left {
+  &-arrow-down {
     width: 20px;
     height: 20px;
     font-size: 29px;
@@ -73,6 +73,9 @@ body {
     transition: color 0.2s ease-in;
     &.white {
       color: $white;
+    }
+    &.hide {
+      display: none;
     }
   }
 

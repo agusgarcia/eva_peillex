@@ -36,7 +36,7 @@ export default class Project {
       $fullpage: $('#fullpage'),
       $menu: $(".right-menu"),
       $seeButton: $('.see-more'),
-      $arrowDown: $('.icon-arrow'),
+      $arrowDown: $('.icon-arrow-down.icon-global'),
       $currentSlide: $('.project_left'),
       $currentSection: $('.section'),
 
@@ -102,6 +102,7 @@ export default class Project {
   showDetails() {
     console.log(this.$els.$currentSlide);
     this.$els.$currentSlide.addClass('hide');
+    this.$els.$arrowDown.addClass('hide');
     this.$els.$currentSection.addClass('opened');
     this.$els.$seeButton.addClass('hide-left');
     this.$els.$details.removeClass('hidden');
@@ -109,6 +110,7 @@ export default class Project {
     this.$els.$fullpage.fullpage.reBuild();
 
     this.$els.$fullpage.fullpage.setAllowScrolling(false);
+    this.$els.$fullpage.fullpage.setKeyboardScrolling(false);
 
     let details = new Details();
     details.initAnimations();
